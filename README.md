@@ -1,3 +1,33 @@
+# Running it
+
+git clone ...```URL```...
+cd ...```folder```...
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+yarn install
+OR
+npm install
+
+<!-- Running using metro for development -->
+npm run android
+
+<!-- Release app for independent use -->
+https://reactnative.dev/docs/signed-apk-android
+
+cd android
+./gradlew bundleRelease
+cd ../
+npx react-native run-android --variant=release
+
+
+<!-- ############################################## -->
+
+
 # workforce-app-android
 React Native app for Workforce
 
@@ -39,8 +69,6 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-6.3-bin.zip
 Note: If you installed jdk 14
 
 
-<!-- Building for release -->
-https://reactnative.dev/docs/signed-apk-android
 
 
 # ADB Android wifi connect
